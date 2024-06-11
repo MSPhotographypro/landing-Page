@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    background-image: url("./img/background.jpg"); /* Use url() to specify the image path */
+    background-size: cover; /* Ensure the background image covers the entire body */
+    background-position: center; /* Center the background image */
+}
+
+
+.josefin-sans-heading {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.josefin-sans-paragraph {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav .menu-icon,
+header nav .close-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6600;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.img-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.img-logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.text {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: #ec0606;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.gallery-images img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer form {
+    margin-bottom: 1rem;
+}
+
+footer .social-media {
+    margin-top: 1rem;
+}
+
+footer .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+footer .social-media a:hover {
+    color: #ff6600;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    header nav .menu-icon {
+        display: block;
+    }
+
+    header nav .close-icon {
+        display: none;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background-color: #333;
+        padding: 1rem;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+        width: 100%;
+    }
+
+    header nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    header nav ul.showing {
+        display: flex;
+    }
+
+    .img-logo img {
+        max-width: 150px;
+        align-items: center;
+    }
+}
+/* New Styles */
+.img-logo-center {
+    text-align: center;
+    margin-top: 20px; /* Adjust as needed */
+    perspective: 1000px; /* Add perspective for 3D effect */
+}
+
+.img-logo-center img {
+    width: 200px; /* Adjust width as needed */
+    height: auto;
+    animation: flip 3s infinite; /* Apply the flip animation */
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg); /* Start with no rotation */
+    }
+    100% {
+        transform: rotateY(360deg); /* Rotate 360 degrees */
+    }
+}
+.typewriter h1 {align-items: center;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid purple; /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(20, end) forwards, /* Typing animation */
+      colorChange 3s 3.5s infinite alternate; /* Color change animation */
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: purple; }
+}
