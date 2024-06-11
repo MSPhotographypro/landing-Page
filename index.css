@@ -109,16 +109,37 @@ section {
     vertical-align: middle;
 }
 
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* @keyframes flash {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+} */
+
 .text {
     position: absolute;
-    bottom: 50px;
+    bottom: 0px;
     left: 50px;
     color: #ec0606;
     font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
     border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: scroll-left 10s linear infinite, flash 1s infinite;
 }
+
 
 .gallery-images {
     display: flex;
@@ -228,24 +249,93 @@ footer .social-media a:hover {
         transform: rotateY(360deg); /* Rotate 360 degrees */
     }
 }
-.typewriter h1 {align-items: center;
+.typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid purple; /* The typewriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    margin: 0 auto; /* Gives centered scrolling effect (adjust as needed) */
     letter-spacing: .15em; /* Adjust as needed */
     animation: 
-      typing 3.5s steps(20, end) forwards, /* Typing animation */
-      colorChange 3s 3.5s infinite alternate; /* Color change animation */
-}
-
-/* The typing effect */
-@keyframes typing {
+      typing 3.5s steps(40, end) forwards, /* Typing animation */
+      colorChange 3s 3.5s infinite alternate; /* Optional color change animation */
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
     from { width: 0 }
     to { width: 100% }
+  }
+  
+  /* Optional color change animation (adjust colors as desired) */
+  @keyframes colorChange {
+    0% { color: #fff; } /* Start with white */
+    50% { color: #00ffff; } /* Change to light blue */
+    100% { color: #fff; } /* Back to white */
+  }
+  
+  .about-us {
+    padding: 50px 20px;
+    background: #fff;
 }
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: purple; }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-us h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.left, .right {
+    flex: 1;
+    padding: 20px;
+}
+
+.left {
+    max-width: 50%;
+}
+
+.left p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    .left, .right {
+        max-width: 100%;
+        padding: 10px;
+    }
+    .about-us h2 {
+        font-size: 2em;
+    }
+    .left p {
+        font-size: 1em;
+    }
 }
