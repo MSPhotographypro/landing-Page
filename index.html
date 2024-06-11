@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <body>
@@ -39,12 +40,16 @@
 
     <!-- Main Content -->
     <main>
-        <div class="typewriter">
-            <h1>MAHANTA STUDIO</h1>
+        <div>
+            <div class="typewriter">
+                <h1>MAHANTA STUDIO</h1>
+            </div>
+
             <div class="img-logo-center">
                 <img src="./img/img_main.png" alt="Main Logo">
             </div>
         </div>
+
         <section id="home">
 
             <div class="slideshow-container">
@@ -68,14 +73,30 @@
                 </div>
                 <div class="text">
                     <h1 class="josefin-sans-heading">Welcome to Our Photo Studio</h1>
-                    <p class="josefin-sans-paragraph">Capturing your moments with perfection.</p>
+                    <!-- <p class="josefin-sans-paragraph">Capturing your moments with perfection.</p> -->
                 </div>
             </div>
         </section>
 
-        <section id="about">
-            <h2>About Us</h2>
-            <p>We are a professional photo studio with years of experience...</p>
+        <section id="about-us" class="about-us" data-aos="fade-up">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="content">
+                    <div class="left">
+                        <p>At [Your Photography Name], we capture the moments that matter the most. Our team of professional
+                            photographers is dedicated to providing stunning visuals that tell a story. Whether it's a wedding,
+                            a corporate event, or a personal photoshoot, we bring creativity and professionalism to every
+                            project.</p>
+                        <p>Our journey began in [Year], and since then, we have been committed to excellence and innovation in
+                            photography. We believe in the power of images to convey emotions, preserve memories, and inspire
+                            others.</p>
+                        <p>Join us in celebrating the art of photography and let us help you capture your unique story.</p>
+                    </div>
+                    <div class="right">
+                        <img src="./img/map.gif" alt="Main Logo">
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="services">
@@ -97,7 +118,9 @@
             <h2>Our Location</h2>
             <div id="map">
                 <!-- Embed Google Map -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d349.50120672552884!2d85.788906!3d21.3382844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1ec37b55469d51%3A0xa39a260f9ae74e99!2sMahanta%20Studio!5e0!3m2!1sen!2sin!4v1686328062543!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d349.50120672552884!2d85.788906!3d21.3382844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1ec37b55469d51%3A0xa39a260f9ae74e99!2sMahanta%20Studio!5e0!3m2!1sen!2sin!4v1686328062543!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
 
@@ -143,6 +166,10 @@
 
     <script src="index.js"></script>
     <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
