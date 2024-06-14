@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
 </head>
 
 <body>
@@ -30,9 +32,9 @@
             </div>
             <ul id="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -78,40 +80,64 @@
             </div>
         </section>
 
-        <section id="about-us" class="about-us" data-aos="fade-up">
-            <div class="container">
-                <h2>About Us</h2>
-                <div class="content">
-                    <div class="left">
-                        <p>At [Your Photography Name], we capture the moments that matter the most. Our team of professional
-                            photographers is dedicated to providing stunning visuals that tell a story. Whether it's a wedding,
-                            a corporate event, or a personal photoshoot, we bring creativity and professionalism to every
-                            project.</p>
-                        <p>Our journey began in [Year], and since then, we have been committed to excellence and innovation in
-                            photography. We believe in the power of images to convey emotions, preserve memories, and inspire
-                            others.</p>
-                        <p>Join us in celebrating the art of photography and let us help you capture your unique story.</p>
-                    </div>
-                    <div class="right">
-                        <img src="./img/map.gif" alt="Main Logo">
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <section id="services">
             <h2>Our Services</h2>
-            <ul>
-                <li>Wedding Photography</li>
-                <li>Portrait Photography</li>
-                <li>Event Photography</li>
-            </ul>
+
+            <div class="slider-container">
+                <h3>Wedding</h3>
+                <div class="slider">
+                  <!-- Slides dynamically generated here -->
+                </div>
+                <div class="arrow">
+                  <span class="prev" onclick="plusSlides(-1)">&lt;</span>
+                  <span class="next" onclick="plusSlides(1)">&gt;</span>
+                </div>
+                <div class="dots-container">
+                  <!-- Dots dynamically generated here -->
+                </div>
+              </div>
+            </div>
+
+            <div class="portrait">
+                <h3>portrait</h3>
+            </div>
+            <div class="Event">
+                <h3>Event</h3>
+            </div>
         </section>
 
         <section id="gallery">
             <h2>Gallery</h2>
             <div class="gallery-images">
                 <!-- Add your gallery images here -->
+            </div>
+        </section>
+        <section id="about" class="about-us" data-aos="fade-up">
+            <div class="container">
+                <h2>About Us</h2>
+                <div class="content">
+                    <div class="left">
+                        <p>At <span class="titel-about">MS Photography</span>, we capture the moments that matter the
+                            most. Our team of professional
+                            photographers is dedicated to providing stunning visuals that tell a story. Whether it's a
+                            wedding,
+                            a corporate event, or a personal photoshoot, we bring creativity and professionalism to
+                            every
+                            project.</p>
+                        <p>Our journey began in <span class="titel-about">2014</span>, and since then, we have been
+                            committed to excellence and innovation in
+                            photography. We believe in the power of images to convey emotions, preserve memories, and
+                            inspire
+                            others.</p>
+                        <p>Join us in celebrating the art of photography and let us help you capture your unique story.
+                        </p>
+                    </div>
+                    <div class="right">
+                        <img src="./img/map.gif" alt="Main Logo">
+                    </div>
+                </div>
             </div>
         </section>
         <section id="location">
@@ -125,12 +151,6 @@
         </section>
 
         <section id="reviews">
-            <!-- <h2>Customer Reviews</h2>
-            <div class="review">
-                <img src="path-to-reviewer-photo/photo1.jpg" alt="Customer Photo">
-                <p>"Great experience! Highly recommend." - <span>★★★★★</span></p>
-            </div>
-            Add more reviews as needed -->
 
             <div class="elfsight-app-80b49b67-a009-4a93-be0a-8f5510434ed2" data-elfsight-app-lazy></div>
         </section>
@@ -161,7 +181,7 @@
             <a href="your-instagram-link" target="_blank">Instagram</a>
             <a href="your-twitter-link" target="_blank">Twitter</a>
         </div>
-        <p>&copy; 2024 Photo Studio. All rights reserved.</p>
+        <p>&copy; 2024 MSphotography All rights reserved.</p>
     </footer>
 
     <script src="index.js"></script>
@@ -170,6 +190,10 @@
     <script>
         AOS.init();
     </script>
+
+
+
+
 </body>
 
 </html>
