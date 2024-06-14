@@ -40,3 +40,98 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
+//wedding slider buttons
+// Wedding slider buttons
+let slideIndWedding = 1; // Rename slideInd to slideIndWedding
+showSlidesWedding(slideIndWedding); // Call showSlidesWedding with the correct initial index
+
+function plusSlides(n) {
+  showSlidesWedding(slideIndWedding += n); // Adjust for slideIndWedding
+}
+
+function currentSlide(n) {
+  showSlidesWedding(slideIndWedding = n); // Adjust for slideIndWedding
+}
+
+function showSlidesWedding(n) { // Rename showSlides to showSlidesWedding
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+
+  // If no slides, return
+  if (slides.length === 0) {
+    return;
+  }
+
+  // Reset slideIndWedding if it goes out of bounds
+  if (n > slides.length) { slideIndWedding = 1; }
+  if (n < 1) { slideIndWedding = slides.length; }
+
+  // Hide all slides and remove 'active' class from dots
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  // Display the current slide and mark the corresponding dot as active
+  slides[slideIndWedding - 1].style.display = "block";
+  dots[slideIndWedding - 1].className += " active";
+}
+document.addEventListener("DOMContentLoaded", function() {
+  const imagesData = [
+    ["./img/01.jpg", "./img/02.jpg", "./img/03.jpg"],
+    ["./img/04.jpg", "./img/05.jpg", "./img/01.jpg"],
+    ["./img/02.jpg", "./img/03.jpg", "./img/04.jpg"],
+    ["./img/01.jpg", "./img/02.jpg", "./img/03.jpg"],
+    ["./img/04.jpg", "./img/05.jpg", "./img/01.jpg"],
+    ["./img/02.jpg", "./img/03.jpg", "./img/04.jpg"],
+    ["./img/01.jpg", "./img/02.jpg", "./img/03.jpg"],
+    ["./img/04.jpg", "./img/05.jpg", "./img/01.jpg"],
+    ["./img/02.jpg", "./img/03.jpg", "./img/04.jpg"],
+    ["./img/01.jpg", "./img/02.jpg", "./img/03.jpg"],
+    ["./img/04.jpg", "./img/05.jpg", "./img/01.jpg"],
+    ["./img/02.jpg", "./img/03.jpg", "./img/04.jpg"],
+  ];
+
+  const sliderContainer = document.querySelector(".slider");
+  const dotsContainer = document.querySelector(".dots-container");
+
+  imagesData.forEach((imageArray, index) => {
+    // Create slide div
+    const slide = document.createElement("div");
+    slide.className = "mySlides";
+
+    // Create slide group div
+    const slideGroup = document.createElement("div");
+    slideGroup.className = "slide-group";
+
+    // Create images and add to slide group
+    imageArray.forEach(imageSrc => {
+      const img = document.createElement("img");
+      img.src = imageSrc;
+      img.alt = "Image";
+      slideGroup.appendChild(img);
+    });
+
+    // Append slide group to slide
+    slide.appendChild(slideGroup);
+
+    // Append slide to slider container
+    sliderContainer.appendChild(slide);
+
+    // Create dot for this slide
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    dot.onclick = function() {
+      currentSlide(index + 1);
+    };
+
+    // Append dot to dots container
+    dotsContainer.appendChild(dot);
+  });
+
+  // Show the first slide initially
+  showSlides(slideInd);
+});
