@@ -260,11 +260,11 @@ footer .social-media a:hover {
       colorChange 3s 3.5s infinite alternate; /* Optional color change animation */
   }
   
-  /* The typing effect */
+  /* The typing effect
   @keyframes typing {
     from { width: 0 }
     to { width: 100% }
-  }
+  } */
   
   /* Optional color change animation (adjust colors as desired) */
   @keyframes colorChange {
@@ -375,7 +375,7 @@ footer .social-media a:hover {
     animation: colorChange 2s infinite alternate; /* Animation properties */
 }
 
-/* Define the animation */
+/* Define the animation
 @keyframes colorChange {
     0% {
         color: purple; /* Starting color */
@@ -385,7 +385,7 @@ footer .social-media a:hover {
         color: magenta; /* Ending color */
         font-size: 20px; /* Ending font size */
     }
-}
+} */
 
 /* Services */
 #services {
