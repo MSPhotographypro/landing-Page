@@ -489,3 +489,141 @@ footer .social-media a:hover {
   .dots-container .active {
     background-color: #717171;
   }
+
+  /* contac tUs */
+  .form-container {
+    /* background-color: #222; */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    animation: fadeInUp 1s ease-out;
+}
+h3 {
+    font-size: 1.8rem;
+    color: #fbf9f6;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    z-index: auto;
+}
+.form-control {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+}
+.form-label {
+    font-weight: bold;
+    color: #fff;
+}
+.form-control:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 0 0.2rem rgba(255, 152, 0, 0.25);
+}
+.btn-submit {
+    background-color: #ff9800;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #fff;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+.btn-submit:hover {
+    background-color: #e68900;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#contact div h3 {
+    color: white !important;
+}
+/* Send massage */
+#contact div .btn-submit {
+    background-color: #ffeb3b; /* Bright yellow color */
+    color: #000; /* Black text color */
+    font-weight: bold;
+    border-radius: 50px; /* Pill-shaped button */
+    padding: 10px 20px; /* Spacing inside the button */
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase; /* All caps for the text */
+}
+
+
+.btn-submit i {
+    font-size: 1.2rem; /* Adjusts the icon size */
+}
+/* find us */
+
+.ftco-footer-social .social-icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background-color: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: #ffba08;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.ftco-footer-social .social-icon:hover {
+    background-color: #ffba08;
+    color: #333;
+}
+
+.ftco-footer-social .normal-txt {
+    color: #b5b5b5;
+    margin-right: 15px;
+    font-size: 18px;
+    align-self: center;
+}
+
+.ftco-footer-social .fab {
+    vertical-align: middle;
+}
+/* upload file */
+#upload-section {
+    background-color: transparent;
+    color: #fff;
+    padding: 40px 0;
+}
+
+#upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fileInput {
+    color: #fff;
+}
+
+#upload-form .btn-primary {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#upload-form .btn-primary:hover {
+    background-color: #000;
+    color: #fff;
+}
+
